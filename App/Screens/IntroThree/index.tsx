@@ -1,18 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { Intro } from "../../Components";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
+const animation = require("../../Animations/snowflakeloader.json");
 
 const IntroThree = () => (
-  <View style={styles.container}>
-    <Text>IntroThree</Text>
-  </View>
+  <Intro sourceOfAnimation={animation} title="Title Three" body="Lorem Ipsum" />
 );
 
 export default IntroThree;

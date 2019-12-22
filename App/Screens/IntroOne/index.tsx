@@ -1,18 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { Intro } from "../../Components";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
+const animation = require("../../Animations/nointernet.json");
 
 const IntroOne = () => (
-  <View style={styles.container}>
-    <Text>IntroOne</Text>
-  </View>
+  <Intro sourceOfAnimation={animation} title="Title One" body="Lorem Ipsum" />
 );
 
 export default IntroOne;

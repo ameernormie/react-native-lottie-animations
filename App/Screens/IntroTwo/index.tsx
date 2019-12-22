@@ -1,18 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { Intro } from "../../Components";
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});
+const animation = require("../../Animations/archer.json");
 
 const IntroTwo = () => (
-  <View style={styles.container}>
-    <Text>IntroTwo</Text>
-  </View>
+  <Intro sourceOfAnimation={animation} title="Title Two" body="Lorem Ipsum" />
 );
 
 export default IntroTwo;
