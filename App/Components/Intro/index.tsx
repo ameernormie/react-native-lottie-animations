@@ -14,7 +14,7 @@ const Intro = ({ sourceOfAnimation, title, body }) => (
       <LottieView
         source={sourceOfAnimation}
         autoPlay
-        style={{ width: 180, height: 180 }}
+        style={{ width: 200, height: 250 }}
         resizeMode="cover"
       />
     </AnimationView>
