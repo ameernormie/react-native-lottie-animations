@@ -1,28 +1,27 @@
 import React from "react";
-import LottieView from "lottie-react-native";
 import {
-  AnimationView,
-  Container,
-  IntroText,
-  IntroTitle,
-  DescriptionView
-} from "./styledComponent";
+  LottieViewStyled,
+  AnimationViewStyled,
+  ContainerStyled,
+  IntroTextStyled,
+  IntroTitleStyled,
+  DescriptionViewStyled
+} from "./intro.style";
 
 const Intro = ({ sourceOfAnimation, title, body }) => (
-  <Container>
-    <AnimationView>
-      <LottieView
+  <ContainerStyled>
+    <AnimationViewStyled>
+      <LottieViewStyled
         source={sourceOfAnimation}
         autoPlay
-        style={{ width: 200, height: 250 }}
         resizeMode="cover"
       />
-    </AnimationView>
-    <DescriptionView>
-      <IntroTitle>{title}</IntroTitle>
-      <IntroText>{body}</IntroText>
-    </DescriptionView>
-  </Container>
+    </AnimationViewStyled>
+    <DescriptionViewStyled>
+      <IntroTitleStyled>{title}</IntroTitleStyled>
+      <IntroTextStyled>{body}</IntroTextStyled>
+    </DescriptionViewStyled>
+  </ContainerStyled>
 );
 
 export default Intro;
