@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const Container = styled.SafeAreaView`
+export const ContainerStyled = styled.SafeAreaView`
   position: absolute;
   left: 0;
   right: 0;
@@ -14,13 +14,13 @@ export const Container = styled.SafeAreaView`
   background-color: transparent;
 `;
 
-export const Tracker = styled.View`
+export const TrackerStyled = styled.View`
   flex-direction: row;
   justify-content: space-around;
   width: 80;
 `;
 
-export const Circle = styled.View`
+export const CircleStyled = styled.View`
   height: 10px;
   width: 10px;
   background-color: ${props => (props.color ? "#fff" : "#a9c3c7")};

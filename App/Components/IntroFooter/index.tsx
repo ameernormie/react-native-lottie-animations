@@ -2,7 +2,11 @@
 import React from "react";
 import { TouchableOpacity } from "react-native";
 import { withNavigation } from "react-navigation";
-import { Container, Tracker, Circle } from "./styledComponent";
+import {
+  ContainerStyled,
+  TrackerStyled,
+  CircleStyled
+} from "./introfooter.style";
 import Icon from "../Icon";
 
 const IntroFooter = ({ navigation }) => {
@@ -14,19 +18,19 @@ const IntroFooter = ({ navigation }) => {
       : navigation.navigate("Home");
   const trackerColor = indexOfComp => indexOfCurrentScreen === indexOfComp;
   return (
-    <Container>
+    <ContainerStyled>
       <TouchableOpacity onPress={() => navigation.navigate("Home")}>
         <Icon iconName="home" />
       </TouchableOpacity>
-      <Tracker>
+      <TrackerStyled>
         {[0, 1, 2].map(indexOfComp => (
-          <Circle key={indexOfComp} color={trackerColor(indexOfComp)} />
+          <CircleStyled key={indexOfComp} color={trackerColor(indexOfComp)} />
         ))}
-      </Tracker>
+      </TrackerStyled>
       <TouchableOpacity onPress={nameOfNextScreen}>
         <Icon iconName={indexOfCurrentScreen === 2 ? "check" : "arrowright"} />
       </TouchableOpacity>
-    </Container>
+    </ContainerStyled>
   );
 };
 export default withNavigation(IntroFooter);
